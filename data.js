@@ -1,16 +1,15 @@
 window.PROFILE = {
   "name": "Hyeonseung Shin",
-  "affiliation": "Visual Media Lab · KAIST",
+  "affiliation": "Visual Media Lab · CTRI · KAIST",
   "intro": "Exploring shape, motion, and simulation through computer graphics.",
   "bio": [
-    "I am affiliated with the Visual Media Lab at KAIST. My research spans facial animation, cloth simulation, and geometric methods for computational modeling.",
-    "My work includes facial animation retargeting, detecting and correcting mis-drapes in simulated garments, collision-avoiding garment positioning, and modeling salt precipitation from sparse measurements."
+    "I am a postdoctoral researcher at the Culture Technology Research Institute (CTRI), KAIST, affiliated with the Visual Media Lab.",
+    "My research focuses on physics-based simulation, virtual try-on, and geometry processing, with applications to garment construction and fitting, cloth simulation, shape deformation, and facial animation."
   ],
   "researchTags": [
-    "Computer graphics",
-    "Facial animation",
-    "Cloth simulation",
-    "Geometric modeling"
+    "Physics-based simulation",
+    "Virtual try-on",
+    "Geometry processing"
   ],
   "email": "hs.shin10@kaist.ac.kr",
   "orcidUrl": "https://orcid.org/0009-0004-9539-8978",
@@ -22,12 +21,13 @@ window.PROFILE = {
     {
       "institution": "KAIST",
       "period": "March 2025 – Present",
-      "detail": "Korea Advanced Institute of Science and Technology · Daejeon, South Korea"
+      "role": "Postdoctoral Researcher",
+      "detail": "Culture Technology Research Institute (CTRI) · Visual Media Lab · Daejeon, South Korea"
     },
     {
-      "institution": "Seoul National University",
-      "period": "March 2016 – February 2025",
-      "detail": "Seoul, South Korea"
+      "institution": "TG3D Studio Korea",
+      "period": "June 2019 – May 2021",
+      "role": "Intern"
     }
   ],
   "publications": [
@@ -92,6 +92,143 @@ window.PROFILE = {
       "url": "https://diglib.eg.org/items/63d2f1cd-ee44-4da6-861b-86359dafd9f2",
       "pdf": "https://diglib.eg.org/bitstream/handle/10.2312/pg20241306/pg20241306.pdf",
       "summary": "Detects implausible folds in simulated clothing through geometric tests and repairs them with local corrections while preserving the surrounding drape."
+    }
+  ],
+  "role": "Postdoctoral Researcher",
+  "researchAreas": [
+    {
+      "title": "Physics-Based Simulation",
+      "topics": [
+        "Cloth simulation",
+        "Rigid body and fluid simulation"
+      ]
+    },
+    {
+      "title": "Virtual Try-On",
+      "topics": [
+        "Garment construction",
+        "Garment editing and fitting"
+      ]
+    },
+    {
+      "title": "Geometry Processing",
+      "topics": [
+        "Deformation transfer",
+        "Shape deformation"
+      ]
+    }
+  ],
+  "skills": [
+    "C++",
+    "C",
+    "Python",
+    "OpenGL",
+    "Qt"
+  ],
+  "education": [
+    {
+      "institution": "Seoul National University",
+      "period": "March 2016 – February 2025",
+      "degree": "Ph.D. program",
+      "department": "Department of Electrical and Computer Engineering",
+      "detail": "Graphics and Media Laboratory · Advisor: Prof. Hyeong-Seok Ko"
+    },
+    {
+      "institution": "Inha University",
+      "period": "March 2009 – February 2016",
+      "degree": "Bachelor of Information and Communication Engineering",
+      "department": "Department of Information and Communication Engineering",
+      "detail": "GPA: 4.1/4.5"
+    }
+  ],
+  "projects": [
+    {
+      "organization": "Visual Media Lab",
+      "period": "2025–",
+      "title": "Virtual Space Automation Project",
+      "detail": "Development of Virtual Space Automation and Intelligent Editor Technology based on Space Interface."
+    },
+    {
+      "organization": "TG3D Studio Korea",
+      "period": "2021–2023",
+      "title": "Automatic Stitching and Seaming"
+    },
+    {
+      "organization": "TG3D Studio Korea",
+      "period": "2020–2021",
+      "title": "Preprocess of Automatic Stitching and Seaming"
+    },
+    {
+      "organization": "TG3D Studio Korea",
+      "period": "2019–2020",
+      "title": "OBJ Clothing Simulation"
+    },
+    {
+      "organization": "TG3D Studio Korea",
+      "period": "2018–2019",
+      "title": "Dart/Tuck/Pleat Creation"
+    },
+    {
+      "organization": "TG3D Studio Korea",
+      "period": "2017–2018",
+      "title": "DXF Import and Export"
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Programming Methodologies",
+      "language": "C++",
+      "terms": [
+        "Fall 2024",
+        "Fall 2023",
+        "Fall 2022",
+        "Fall 2021",
+        "Fall 2020",
+        "Spring 2020",
+        "Fall 2019",
+        "Spring 2018"
+      ]
+    },
+    {
+      "course": "Digital Computer Concept and Practice",
+      "language": "Python",
+      "terms": [
+        "Spring 2024"
+      ]
+    },
+    {
+      "course": "Concepts and Practice of Computer",
+      "language": "Python",
+      "terms": [
+        "Spring 2023",
+        "Spring 2022",
+        "Spring 2021"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "period": "Fall 2024 · Fall 2023",
+      "title": "Excellence in Teaching Assistant Awards",
+      "detail": "Seoul National University",
+      "kind": "personal"
+    },
+    {
+      "period": "Spring 2023 · Fall 2022 · Spring 2022",
+      "title": "Excellence in Teaching Awards",
+      "detail": "Seoul National University · Prof. Hyeong-Seok Ko",
+      "kind": "course"
+    }
+  ],
+  "manuscripts": [],
+  "inPreparation": [
+    {
+      "title": "Anywear: Text-Driven Garment Mask Estimation for Mesh-Agnostic Stylized Characters",
+      "status": "In preparation · February 2026"
+    },
+    {
+      "title": "Automatic Garment Grading based on Body Measurements",
+      "status": "In preparation · February 2026"
     }
   ]
 };

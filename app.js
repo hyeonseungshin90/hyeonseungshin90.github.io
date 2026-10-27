@@ -44,6 +44,23 @@
   const bio = Array.isArray(profile.bio) ? profile.bio : profile.bio ? [profile.bio] : [];
   bio.forEach(paragraph => byId('bio').append(make('p', '', paragraph)));
   (profile.researchTags || []).forEach(tag => byId('research-tags').append(make('li', '', tag)));
+  const researchAreas = Array.isArray(profile.researchAreas) ? profile.researchAreas : [];
+  if (researchAreas.length) {
+    byId('research-tags').hidden = true;
+    byId('research-areas').hidden = false;
+    researchAreas.forEach(area => {
+      const group = make('div', 'research-area');
+      group.append(make('h3', 'small-heading', area.title));
+      const topics = make('ul', 'research-topics');
+      (area.topics || []).forEach(topic => topics.append(make('li', '', topic)));
+      group.append(topics); byId('research-areas').append(group);
+    });
+  }
+  const skills = Array.isArray(profile.skills) ? profile.skills : [];
+  if (skills.length) {
+    byId('skills-block').hidden = false;
+    skills.forEach(skill => byId('skills-list').append(make('li', '', skill)));
+  }
   const counts = ['Journal', 'Conference', 'Preprint'].map(type => ({ type, count: publications.filter(paper => paper.type === type).length }));
   counts.filter(item => item.count > 0).forEach(item => {
     const stat = make('div', 'stat');
@@ -128,6 +145,91 @@
     if (item.detail) body.append(make('p', 'experience-detail', item.detail));
     row.append(body); byId('experience-list').append(row);
   });
+  const education = Array.isArray(profile.education) ? profile.education : [];
+  if (education.length) {
+    byId('education').hidden = false;
+    education.forEach(item => {
+      const row = make('div', 'experience-item');
+      row.append(make('p', 'experience-period', item.period));
+      const body = make('div', 'experience-body');
+      body.append(make('h3', 'experience-institution', item.institution));
+      if (item.degree) body.append(make('p', 'experience-role', item.degree));
+      if (item.department) body.append(make('p', 'experience-detail', item.department));
+      if (item.detail) body.append(make('p', 'experience-detail', item.detail));
+      row.append(body); byId('education-list').append(row);
+    });
+  }
+  const projects = Array.isArray(profile.projects) ? profile.projects : [];
+  if (projects.length) {
+    byId('projects').hidden = false;
+    projects.forEach(item => {
+      const row = make('article', 'cv-record');
+      row.append(make('p', 'cv-period', item.period));
+      const body = make('div', 'cv-record-body');
+      body.append(make('h3', 'cv-record-title', item.title));
+      if (item.organization) body.append(make('p', 'cv-record-context', item.organization));
+      if (item.detail) body.append(make('p', 'cv-record-detail', item.detail));
+      row.append(body); byId('projects-list').append(row);
+    });
+  }
+  const teaching = Array.isArray(profile.teaching) ? profile.teaching : [];
+  const awards = Array.isArray(profile.awards) ? profile.awards : [];
+  if (teaching.length || awards.length) {
+    byId('teaching-honors').hidden = false;
+    if (!teaching.length) byId('teaching-honors-heading').textContent = 'Honors';
+    if (!awards.length) byId('teaching-honors-heading').textContent = 'Teaching';
+  }
+  if (teaching.length) {
+    byId('teaching-block').hidden = false;
+    teaching.forEach(item => {
+      const row = make('article', 'teaching-record');
+      const heading = make('div', 'teaching-heading');
+      heading.append(make('h4', 'cv-record-title', item.course));
+      if (item.language) heading.append(make('span', 'course-language', `Language: ${item.language}`));
+      row.append(heading);
+      const terms = make('ul', 'teaching-terms');
+      (item.terms || []).forEach(term => terms.append(make('li', '', term)));
+      if (terms.childElementCount) row.append(terms);
+      byId('teaching-list').append(row);
+    });
+  }
+  if (awards.length) {
+    byId('awards-block').hidden = false;
+    awards.forEach(item => {
+      const row = make('article', 'cv-record');
+      row.append(make('p', 'cv-period', item.period));
+      const body = make('div', 'cv-record-body');
+      if (item.kind === 'course') body.append(make('p', 'record-kicker', 'Course recognition'));
+      body.append(make('h4', 'cv-record-title', item.title));
+      if (item.detail) body.append(make('p', 'cv-record-detail', item.detail));
+      row.append(body); byId('awards-list').append(row);
+    });
+  }
+  const manuscripts = Array.isArray(profile.manuscripts) ? profile.manuscripts : [];
+  const inPreparation = Array.isArray(profile.inPreparation) ? profile.inPreparation : [];
+  if (manuscripts.length || inPreparation.length) {
+    const block = byId('research-development');
+    block.hidden = false;
+    block.append(make('h3', 'subsection-heading', 'Research in progress'));
+    [{ label: 'Manuscripts', items: manuscripts }, { label: 'In preparation', items: inPreparation }].forEach(group => {
+      if (!group.items.length) return;
+      const groupBlock = make('div', 'progress-group');
+      groupBlock.append(make('h4', 'small-heading', group.label));
+      group.items.forEach(item => {
+        const row = make('article', 'progress-record');
+        if (item.status) row.append(make('p', 'progress-status', item.status));
+        row.append(make('h5', 'progress-title', item.title));
+        if (item.authors && item.authors.length) row.append(renderAuthors(item.authors));
+        if (item.venue) row.append(make('p', 'cv-record-context', item.venue));
+        if (item.detail) row.append(make('p', 'cv-record-detail', item.detail));
+        groupBlock.append(row);
+      });
+      block.append(groupBlock);
+    });
+  }
+  document.querySelectorAll('.section:not([hidden])').forEach((section, index) => {
+    section.querySelector('.section-number').textContent = String(index + 1).padStart(2, '0');
+  });
   if (profile.email) {
     const email = byId('contact-email'); email.textContent = profile.email;
     email.href = `mailto:${String(profile.email).trim()}`; email.hidden = false;
@@ -150,3 +252,4 @@
   if (profile.updated) byId('updated-label').textContent = `Updated ${profile.updated}`;
   document.querySelector('meta[name="description"]').content = `${name}${profile.affiliation ? ' · ' + profile.affiliation : ''}. Research, publications, and academic activities.`;
 })();
+
