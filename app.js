@@ -205,28 +205,6 @@
       row.append(body); byId('awards-list').append(row);
     });
   }
-  const manuscripts = Array.isArray(profile.manuscripts) ? profile.manuscripts : [];
-  const inPreparation = Array.isArray(profile.inPreparation) ? profile.inPreparation : [];
-  if (manuscripts.length || inPreparation.length) {
-    const block = byId('research-development');
-    block.hidden = false;
-    block.append(make('h3', 'subsection-heading', 'Research in progress'));
-    [{ label: 'Manuscripts', items: manuscripts }, { label: 'In preparation', items: inPreparation }].forEach(group => {
-      if (!group.items.length) return;
-      const groupBlock = make('div', 'progress-group');
-      groupBlock.append(make('h4', 'small-heading', group.label));
-      group.items.forEach(item => {
-        const row = make('article', 'progress-record');
-        if (item.status) row.append(make('p', 'progress-status', item.status));
-        row.append(make('h5', 'progress-title', item.title));
-        if (item.authors && item.authors.length) row.append(renderAuthors(item.authors));
-        if (item.venue) row.append(make('p', 'cv-record-context', item.venue));
-        if (item.detail) row.append(make('p', 'cv-record-detail', item.detail));
-        groupBlock.append(row);
-      });
-      block.append(groupBlock);
-    });
-  }
   document.querySelectorAll('.section:not([hidden])').forEach((section, index) => {
     section.querySelector('.section-number').textContent = String(index + 1).padStart(2, '0');
   });

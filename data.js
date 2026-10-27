@@ -129,7 +129,7 @@ window.PROFILE = {
     {
       "institution": "Seoul National University",
       "period": "March 2016 – February 2025",
-      "degree": "Ph.D. program",
+      "degree": "Ph.D.",
       "department": "Department of Electrical and Computer Engineering",
       "detail": "Graphics and Media Laboratory · Advisor: Prof. Hyeong-Seok Ko"
     },
@@ -137,8 +137,7 @@ window.PROFILE = {
       "institution": "Inha University",
       "period": "March 2009 – February 2016",
       "degree": "Bachelor of Information and Communication Engineering",
-      "department": "Department of Information and Communication Engineering",
-      "detail": "GPA: 4.1/4.5"
+      "department": "Department of Information and Communication Engineering"
     }
   ],
   "projects": [
@@ -150,13 +149,8 @@ window.PROFILE = {
     },
     {
       "organization": "TG3D Studio Korea",
-      "period": "2021–2023",
+      "period": "2020–2023",
       "title": "Automatic Stitching and Seaming"
-    },
-    {
-      "organization": "TG3D Studio Korea",
-      "period": "2020–2021",
-      "title": "Preprocess of Automatic Stitching and Seaming"
     },
     {
       "organization": "TG3D Studio Korea",
@@ -218,17 +212,6 @@ window.PROFILE = {
       "title": "Excellence in Teaching Awards",
       "detail": "Seoul National University · Prof. Hyeong-Seok Ko",
       "kind": "course"
-    }
-  ],
-  "manuscripts": [],
-  "inPreparation": [
-    {
-      "title": "Anywear: Text-Driven Garment Mask Estimation for Mesh-Agnostic Stylized Characters",
-      "status": "In preparation · February 2026"
-    },
-    {
-      "title": "Automatic Garment Grading based on Body Measurements",
-      "status": "In preparation · February 2026"
     }
   ]
 };
