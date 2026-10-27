@@ -4,7 +4,7 @@ window.PROFILE = {
   "intro": "Exploring shape, animation, and simulation through computer graphics.",
   "bio": [
     "I am a postdoctoral researcher at the Culture Technology Research Institute (CTRI), KAIST, affiliated with the Visual Media Lab.",
-    "My research focuses on physics-based simulation, virtual try-on, and geometry processing, with applications to garment construction and fitting, cloth simulation, shape deformation, and facial animation."
+    "My research focuses on physics-based simulation, virtual try-on, and geometry processing, with applications to garment construction and fitting, cloth simulation, shape modeling, and facial animation."
   ],
   "researchTags": [
     "Physics-based simulation",
@@ -100,7 +100,7 @@ window.PROFILE = {
       "title": "Physics-Based Simulation",
       "topics": [
         "Cloth simulation",
-        "Rigid body and fluid simulation"
+        "Rigid and soft body simulation"
       ]
     },
     {
@@ -114,7 +114,7 @@ window.PROFILE = {
       "title": "Geometry Processing",
       "topics": [
         "Deformation transfer",
-        "Shape deformation"
+        "Shape modeling"
       ]
     }
   ],
@@ -215,4 +215,5 @@ window.PROFILE = {
     }
   ]
 };
+
 
