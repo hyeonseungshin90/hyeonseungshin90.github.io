@@ -1,7 +1,7 @@
 window.PROFILE = {
   "name": "Hyeonseung Shin",
   "affiliation": "Visual Media Lab · CTRI · KAIST",
-  "intro": "Exploring shape, motion, and simulation through computer graphics.",
+  "intro": "Exploring shape, animation, and simulation through computer graphics.",
   "bio": [
     "I am a postdoctoral researcher at the Culture Technology Research Institute (CTRI), KAIST, affiliated with the Visual Media Lab.",
     "My research focuses on physics-based simulation, virtual try-on, and geometry processing, with applications to garment construction and fitting, cloth simulation, shape deformation, and facial animation."
@@ -215,3 +215,4 @@ window.PROFILE = {
     }
   ]
 };
+
