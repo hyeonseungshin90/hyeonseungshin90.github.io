@@ -75,7 +75,7 @@ window.PROFILE = {
       "year": 2025,
       "type": "Journal",
       "doi": "10.1109/TVCG.2024.3401193",
-      "url": "https://doi.org/10.1109/TVCG.2024.3401193",
+      "url": "https://ieeexplore.ieee.org/document/10537068",
       "summary": "Positions clothing parts before simulation to prevent initial tangling, using a compact geometric representation and numerical optimization. Published in the September 2025 issue; first available online in 2024."
     },
     {

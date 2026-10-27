@@ -29,7 +29,7 @@ Public research sources:
 - PDB author affiliation: https://arxiv.org/html/2610.08672v1
 - PDB: https://arxiv.org/abs/2610.08672
 - Salt precipitation preprint: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7156863
-- TVCG: https://snu.elsevierpure.com/en/publications/collision-avoiding-positioning-of-clothing-parts-for-preventing-o/
+- TVCG: https://ieeexplore.ieee.org/document/10537068
 - Pacific Graphics: https://diglib.eg.org/items/63d2f1cd-ee44-4da6-861b-86359dafd9f2
 
 The public publication list contains the three ORCID works and PDB. The original CV file is not part of the website.
